@@ -76,3 +76,43 @@ let lastName = "Doe";
 
 let text_11 = `Welcome ${firstName}, ${lastName}!`;
 console.log(text_11)
+
+// GLOBAL NUMBER METHODS
+console.log("=================== NUMBER METHOD ============")
+console.log(Number(true)); // 1
+console.log(Number(false)); //0
+console.log(Number("10")); // 10
+console.log(Number("  10")); // 10
+console.log(Number("10  ")); //10
+console.log(Number(" 10  "));
+console.log(Number("10.33")); // 10.33
+console.log(Number("10,33")); // NaN
+console.log(Number("10 33")); // NaN
+console.log(Number("John")); //NaN
+
+console.log("========== parseint method ========")
+console.log(parseInt("-10")); // -10
+console.log(parseInt("-10.33")); // -10
+console.log(parseInt("10")); // 10
+console.log(parseInt("10.33")); //10
+console.log(parseInt("10 20 30"));// 10
+console.log(parseInt("10 years"));//10
+console.log(parseInt("years 10")); //NaN
+
+console.log("========= parseFloat() ==========")
+console.log(parseFloat("10"));
+console.log(parseFloat("10.33"));
+console.log(parseFloat("10 20 30"));
+console.log(parseFloat("10 years"));
+console.log(parseFloat("years 10"));
+
+console.log("========= ARRAYS ==========")
+const cars_arr = []
+cars_arr[0] = "BMW";
+cars_arr[1] = "skoda";
+cars_arr[2] = "Honda";
+console.log(cars_arr)
+
+const cars_new_array = new Array("Saab", "Volvo", "BMW");
+console.log(cars_new_array)
+console.log(typeof(cars_new_array))
