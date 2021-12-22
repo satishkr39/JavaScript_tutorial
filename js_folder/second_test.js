@@ -1,3 +1,4 @@
+//require(console.log)
 const cars = ["audi", "bmw"]
 cars.push("toyouta")
 console.log(cars)
@@ -116,3 +117,71 @@ console.log(cars_arr)
 const cars_new_array = new Array("Saab", "Volvo", "BMW");
 console.log(cars_new_array)
 console.log(typeof(cars_new_array))
+
+console.log("========= JS ARRAY METHODS ==========")
+// toString() methods
+console.log(cars_new_array.toString()) // Saab,Volvo,BMW
+// join method
+console.log(cars_new_array.join("*")) // Saab*Volvo*BMW
+// pop
+console.log(cars_new_array.pop()) // BMW
+// push
+console.log(cars_new_array.push("BMW")) // 3
+//shifting
+console.log(cars_new_array.shift()) // saab
+// unshift
+console.log(cars_new_array.unshift('maruti')) //3
+// delete
+delete cars_new_array[0];
+console.log(cars_new_array) // [ <1 empty item>, 'Volvo', 'BMW' ]
+// concat
+my_name = ['satish']
+my_last_name = ['kumar', 'singh']
+merged_array = my_name.concat(my_last_name)
+console.log(merged_array) // [ 'satish', 'kumar', 'singh' ]
+// splice
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+console.log(fruits) // [ 'Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]
+// slice
+const citrus = fruits.slice(1);
+console.log(citrus) //['Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango' ]]
+// sorting
+console.log(fruits.sort()) // [ 'Apple', 'Banana', 'Kiwi', 'Lemon', 'Mango', 'Orange' ]
+// map()
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+console.log(numbers2)
+function myFunction(value, index, array) {
+  return value * 2;
+}
+// filter()
+filtered_number = numbers1.filter(filter_function);
+console.log(filtered_number) //[ 45, 16, 25 ]
+function filter_function(value){
+  return value > 10 // return only value which are greater than 18
+}
+// reduce
+sum = numbers1.reduce(myFunction);
+function myFunction(total, value, index, array) {
+  console.log(total, value)
+  return total + value;
+}
+console.log(sum) // 99
+
+
+
+/*
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+console.log("=========  ==========")
+*/

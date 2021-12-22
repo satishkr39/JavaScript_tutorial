@@ -46,5 +46,36 @@ document.getElementById("demo").innerHTML = 5 + 6;
 <p id="gettime"></p>
 
 <button type="button" onclick="this.innerHTML =Date()"> Show date here itself</button>
+
+<!-- ACCESSING ARRAY ELEMENTS -->
+<hr>
+<h3> Priniting Array Elements </h3>
+<p id="my_array"></p>
+<script>
+    const my_cars = ['bmw', 'volovl', 'mercedes']
+    text = "<ul>"
+    for (let i=0;i<my_cars.length;i++){
+        text += "<li>" + my_cars[i] + "</li>";
+    }
+    text += "</ul>"
+    document.getElementById("my_array").innerHTML = text;
+</script>
+
+<hr>
+<!-- using for each function -->
+<p id="fruits_place"></p>
+<script>
+    const fruits = ["apple", "banana", "Guava"]
+    text = "<ul>"
+    fruits.forEach(my_function)
+    text+= "</ul>"
+
+    function my_function(fruit){
+        text+= "<li>" + fruit +"</li>";
+    }
+
+    document.getElementById("fruits_place").innerHTML = text;
+</script>
+
 </body>
 </html>
