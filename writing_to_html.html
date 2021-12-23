@@ -83,7 +83,18 @@ document.getElementById("demo").innerHTML = 5 + 6;
     const d = new Date()
     document.getElementById("date_time").innerHTML = d;
 </script>
-
+<hr>
+<!-- live working clock on webpage -->
+<h3> live working clock </h3>
+<b><p id="working_time"></p></b>
+<script>
+    setInterval(getTimeFunction, 1000)   // calls the function after each 1 sec
+    function getTimeFunction(){
+        let d = new Date();
+        document.getElementById("working_time").innerHTML 
+        = d.getHours()+" : "+d.getMinutes()+":"+d.getSeconds(); 
+    }
+</script>
 
 
 </body>

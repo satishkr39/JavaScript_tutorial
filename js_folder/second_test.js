@@ -285,9 +285,50 @@ console.log([1,2,3,4].constructor)        // Returns) function Array()   {[nativ
 console.log({name:')John))',age:34}.constructor)  // Returns) function Object()  {[native code]}
 console.log(new Date().constructor)           // Returns function) Date()    {[native code]}
 console.log(function () {}.constructor)        // Returns function Function)(){[native code
-/*)) console.log("=========  ==========")
-console).log("=========  ==========")
-console.log("=========  ==========")
+
+// this keyword
+const person_this = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  },
+  myFunction : function() {
+    return this;
+  }
+};
+console.log(person_this.fullName()) // John Doe
+console.log(person_this.myFunction()) /* OP : {
+  firstName: 'John',
+  lastName: 'Doe',
+  id: 5566,
+  fullName: [Function: fullName],
+  myFunction: [Function: myFunction]
+}*/
+console.log("========= ARROW FUNCTION  ==========")
+// BEFORE ARROW FUNCTION
+hello = function(){
+    return "Hello WOrld"
+}
+// after arrow function
+hello_arrow =  () => {
+    return "Hello from arrow function"
+}
+console.log(hello_arrow())
+console.log("========= js callbacks ==========")
+function displayer(){
+  console.log("DISPLAYER FUNCTION CALLED")
+  console.log("THE SUM IS : "+sum)
+}
+function calculator(a, b, callbackFunction){
+  console.log("CALCULATOR FUNCTION CALLED")
+  sum = a + b;
+  displayer(sum)
+}
+calculator(2,3, displayer)
+
+/*console.log("=========  ==========")
 console.log("=========  ==========")
 console.log("=========  ==========")
 console.log("=========  ==========")
